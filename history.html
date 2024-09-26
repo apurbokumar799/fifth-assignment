@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation History</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="bg-[#f9f7f3] fixed top-0 left-0 w-full z-10 shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <button class="bg-lime-400 text-black font-bold py-2 px-4 rounded-lg" onclick="window.location.href='index.html'">Back to Home</button>
+                </div>
+                <span class="text-yellow-500 text-lg font-semibold" id="totalMoney">
+                    <img src="./assets/coin.png" alt="Coin Icon" class="w-6 h-6 inline"> 0 BDT
+                </span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="px-24 pt-24">
+        <h2 class="text-3xl font-bold mb-6">Donation History</h2>
+        <table class="table-auto w-full bg-white shadow-md rounded-lg">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Location</th>
+                    <th class="px-4 py-2">Amount</th>
+                    <th class="px-4 py-2">Time</th>
+                </tr>
+            </thead>
+            <tbody id="historyTable" class="bg-gray-50">
+                <!-- History entries will be inserted here from JS -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
